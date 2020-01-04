@@ -16,6 +16,7 @@
 
 package io.geekidea.springbootplus.system.vo;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -39,9 +40,11 @@ public class SysPermissionTreeVo implements Serializable {
     private static final long serialVersionUID = 2738804574228359190L;
 
     @ApiModelProperty(value = "主键")
+    @JsonProperty("value")
     private Long id;
 
     @ApiModelProperty(value = "权限名称")
+    @JsonProperty("title")
     private String name;
 
     @ApiModelProperty(value = "父id")

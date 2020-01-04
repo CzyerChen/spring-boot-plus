@@ -65,12 +65,12 @@ public class JacksonConfig implements WebMvcConfigurer {
 
         SimpleModule simpleModule = new SimpleModule();
         // Long类型序列化成字符串，避免Long精度丢失
-        simpleModule.addSerializer(Long.class, ToStringSerializer.instance);
-        simpleModule.addSerializer(Long.TYPE, ToStringSerializer.instance);
+//        simpleModule.addSerializer(Long.class, ToStringSerializer.instance);
+//        simpleModule.addSerializer(Long.TYPE, ToStringSerializer.instance);
 
         // XSS序列化
-        simpleModule.addSerializer(String.class, new XssJacksonSerializer());
-        simpleModule.addDeserializer(String.class, new XssJacksonDeserializer());
+//        simpleModule.addSerializer(String.class, new XssJacksonSerializer());
+//        simpleModule.addDeserializer(String.class, new XssJacksonDeserializer());
 
         // Date
         simpleModule.addSerializer(Date.class, new JacksonDateSerializer());

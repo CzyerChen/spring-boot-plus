@@ -60,7 +60,6 @@ public class SysUser extends BaseEntity {
     private String nickname;
 
     @ApiModelProperty(value = "密码")
-    @NotBlank(message = "密码不能为空")
     private String password;
 
     @ApiModelProperty(value = "盐值")
